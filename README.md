@@ -1,16 +1,110 @@
-# todotask
+# Flutter Firebase Todo App
 
-A new Flutter project.
+A Flutter Todo application built with Firebase Authentication and Cloud Firestore using a Feature-Based Architecture and GetX State Management.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+### Authentication
 
-A few resources to get you started if this is your first Flutter project:
+* User Registration (Email & Password)
+* User Login
+* Firebase Authentication
+* User Logout
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Task Management
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Create Task
+* View Tasks
+* Update Task
+* Delete Task
+
+### Real-Time Updates
+
+* Real-Time Task Synchronization using Cloud Firestore
+* Automatic UI Updates
+
+## Tech Stack
+
+* Flutter
+* Firebase Authentication
+* Cloud Firestore
+* GetX State Management
+
+## Architecture
+
+The project follows a Feature-Based Architecture for better scalability and maintainability.
+
+```text
+lib/
+├── data/
+│   ├── models/
+│   ├── services/
+│   └── providers/
+│
+├── utils/
+│   ├── constants/
+│   ├── helpers/
+│   └── widgets/
+│
+├── feature/
+│   ├── auth/
+│   │   ├── controller/
+│   │   ├── screen/
+│   │   └── model/
+│   │
+│   └── task/
+│       ├── controller/
+│       ├── screen/
+│       └── model/
+│
+└── main.dart
+```
+
+## Setup Instructions
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd todo_app
+```
+
+### Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### Firebase Setup
+
+1. Create a Firebase Project.
+2. Enable Email/Password Authentication.
+3. Enable Cloud Firestore.
+4. Download and add:
+
+   * google-services.json (Android)
+   * GoogleService-Info.plist (iOS)
+
+### Run Project
+
+```bash
+flutter run
+```
+
+### Build APK
+
+```bash
+flutter build apk --release
+```
+
+## Packages Used
+
+* firebase_core
+* firebase_auth
+* cloud_firestore
+* get
+* flutter_screenutil
+
+## Author
+
+Akshay T
